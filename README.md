@@ -123,6 +123,35 @@ Don't close this **Publish** page. You need it later in the tutorial, to create 
 
     QnA Maker is somewhat confident with the score of 42.81%.  
 
+
+### Use cURL to query for the default answer
+
+Any question that QnA Maker is not confident about receives the default answer. This answer is configured in the Azure portal. 
+
+1. In the cURL-enabled terminal, replace `Thank you` with `x`. 
+
+1. Run the cURL command and receive the JSON response, including the score and answer. 
+
+    ```TXT
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+    100   186  100   170  100    16    272     25 --:--:-- --:--:-- --:--:--   297{
+      "answers": [
+        {
+          "questions": [],
+          "answer": "No good match found in KB.",
+          "score": 0.0,
+          "id": -1,
+          "metadata": []
+        }
+      ]
+    }
+    ```
+    
+    QnA Maker returned a score of `0`, which means no confidence. It also returned the default answer. 
+
+
+	
 ### Use cURL to query for a Chit-chat answer
 
 1. In the cURL-enabled terminal, replace `How large can my KB be?` with a bot conversation-ending statement from the user, such as `Thank you`.   
@@ -162,31 +191,4 @@ Don't close this **Publish** page. You need it later in the tutorial, to create 
     ```
 
     Because the question of `Thank you` exactly matched a Chit-chat question, QnA Maker is completely confident with the score of 100. QnA Maker also returned all the related questions, as well as the metadata property containing the Chit-chat metadata tag information.  
-
-### Use cURL to query for the default answer
-
-Any question that QnA Maker is not confident about receives the default answer. This answer is configured in the Azure portal. 
-
-1. In the cURL-enabled terminal, replace `Thank you` with `x`. 
-
-1. Run the cURL command and receive the JSON response, including the score and answer. 
-
-    ```TXT
-      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                     Dload  Upload   Total   Spent    Left  Speed
-    100   186  100   170  100    16    272     25 --:--:-- --:--:-- --:--:--   297{
-      "answers": [
-        {
-          "questions": [],
-          "answer": "No good match found in KB.",
-          "score": 0.0,
-          "id": -1,
-          "metadata": []
-        }
-      ]
-    }
-    ```
-    
-    QnA Maker returned a score of `0`, which means no confidence. It also returned the default answer. 
-
 
