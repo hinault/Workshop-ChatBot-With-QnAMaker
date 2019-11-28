@@ -63,7 +63,7 @@ A client application for QnA Maker is any conversational application that commun
 
     ![Screenshot of QnA Maker portal](../media/qnamaker-tutorial-create-publish-query-in-portal/create-kb-step-5.png)
 
-## Review, save, and train the knowledge base
+### Review, save, and train the knowledge base
 
 1. Review the questions and answers. The first page is questions and answers from the URL. 
 
@@ -77,7 +77,7 @@ A client application for QnA Maker is any conversational application that commun
 
 1. Select **Save and train** in the top menu bar.
 
-## Publish to get knowledge base endpoints
+### Publish to get knowledge base endpoints
 
 Select the **Publish** button from the top menu. On the publish page, select **Publish**.
 
@@ -89,7 +89,7 @@ After the knowledge base is published, the endpoint is displayed.
 
 Don't close this **Publish** page. You need it later in the tutorial, to create a bot. 
 
-## Use cURL to query for an FAQ answer
+### Use cURL to query for an FAQ answer
 
 1. Select the **Curl** tab. 
 
@@ -123,7 +123,7 @@ Don't close this **Publish** page. You need it later in the tutorial, to create 
 
     QnA Maker is somewhat confident with the score of 42.81%.  
 
-## Use cURL to query for a Chit-chat answer
+### Use cURL to query for a Chit-chat answer
 
 1. In the cURL-enabled terminal, replace `How large can my KB be?` with a bot conversation-ending statement from the user, such as `Thank you`.   
 
@@ -163,7 +163,7 @@ Don't close this **Publish** page. You need it later in the tutorial, to create 
 
     Because the question of `Thank you` exactly matched a Chit-chat question, QnA Maker is completely confident with the score of 100. QnA Maker also returned all the related questions, as well as the metadata property containing the Chit-chat metadata tag information.  
 
-## Use cURL to query for the default answer
+### Use cURL to query for the default answer
 
 Any question that QnA Maker is not confident about receives the default answer. This answer is configured in the Azure portal. 
 
