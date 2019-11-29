@@ -31,7 +31,7 @@ A client application for QnA Maker is any conversational application that commun
 
 1. Select **Create a knowledge base** from the top menu.
 
-    ![Screenshot of QnA Maker portal](../media/create-kb-step-1.png)
+    ![Screenshot of QnA Maker portal](media/create-kb-step-1.png)
 
 1. Skip the first step, because you will use your existing QnA Maker service. 
 
@@ -43,11 +43,11 @@ A client application for QnA Maker is any conversational application that commun
     |Azure Subscription name|The billing account in which you created the QnA Maker resource.|
     |Azure QnA Service|Your existing QnA Maker resource.|
 
-    ![Screenshot of QnA Maker portal](../media/create-kb-step-2.png)
+    ![Screenshot of QnA Maker portal](media/create-kb-step-2.png)
 
 1. Enter your knowledge base name, `My Tutorial kb`.
 
-    ![Screenshot of QnA Maker portal](../media/create-kb-step-3.png)
+    ![Screenshot of QnA Maker portal](media/create-kb-step-3.png)
 
 1. Populate your knowledge base with the following settings:  
 
@@ -55,25 +55,25 @@ A client application for QnA Maker is any conversational application that commun
     |--|--|--|
     |URL|`https://docs.microsoft.com/azure/cognitive-services/qnamaker/faqs` |The contents of the FAQ at that URL are formatted with a question followed by an answer. QnA Maker can interpret this format to extract questions and the associated answers.|
     |File |_not used in this tutorial_|This uploads files for questions and answers. |
-    |Chit-chat personality|Friendly|This gives a friendly and casual [personality](../Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later. |
+    |Chit-chat personality|Friendly|This gives a friendly and casual [personality](Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later. |
 
-    ![Screenshot of QnA Maker portal](../media/create-kb-step-4.png)
+    ![Screenshot of QnA Maker portal](media/create-kb-step-4.png)
 
 1. Select **Create your KB** to finish the creation process.
 
-    ![Screenshot of QnA Maker portal](../media/create-kb-step-5.png)
+    ![Screenshot of QnA Maker portal](media/create-kb-step-5.png)
 
 ### Review, save, and train the knowledge base
 
 1. Review the questions and answers. The first page is questions and answers from the URL. 
 
-    ![Screenshot of QnA Maker portal](../media/save-and-train-kb.png)
+    ![Screenshot of QnA Maker portal](media/save-and-train-kb.png)
 
 1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality. 
 
 1. From the toolbar above the list of questions and answers, select the **View options** icon, and then select **Show metadata**. This shows the metadata tags for each question and answer. The Chit-chat questions have the **editorial: chit-chat** metadata already set. This metadata is returned to the client application, along with the selected answer. The client application, such as a chat bot, can use this filtered metadata to determine additional processing or interactions with the user.
 
-    ![Screenshot of QnA Maker portal](../media/save-and-train-kb-chit-chat.png)
+    ![Screenshot of QnA Maker portal](media/save-and-train-kb-chit-chat.png)
 
 1. Select **Save and train** in the top menu bar.
 
@@ -85,7 +85,7 @@ Select the **Publish** button from the top menu. On the publish page, select **P
 
 After the knowledge base is published, the endpoint is displayed.
 
-![Screenshot of endpoint settings](../media/publish-2.png)
+![Screenshot of endpoint settings](media/publish-2.png)
 
 Don't close this **Publish** page. You need it later in the tutorial, to create a bot. 
 
@@ -93,7 +93,7 @@ Don't close this **Publish** page. You need it later in the tutorial, to create 
 
 1. Select the **Curl** tab. 
 
-    ![Screenshot of Curl tab](../media/publish-3-curl.png)
+    ![Screenshot of Curl tab](media/publish-3-curl.png)
 
 1. Copy the text of the **Curl** tab, and run it in a cURL-enabled terminal or command-line. The authorization header's value includes the text `Endpoint`, with a trailing space and then the key.
 
