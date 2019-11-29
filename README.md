@@ -81,7 +81,7 @@ A client application for QnA Maker is any conversational application that commun
 
 Select the **Publish** button from the top menu. On the publish page, select **Publish**.
 
-![Screenshot of QnA Maker portal](../media/publish-1.png)
+![Screenshot of QnA Maker portal](media/publish-1.png)
 
 After the knowledge base is published, the endpoint is displayed.
 
