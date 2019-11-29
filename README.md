@@ -161,10 +161,62 @@ Any question that QnA Maker is not confident about receives the default answer. 
     }
     ```
     
+
     QnA Maker returned a score of `0`, which means no confidence. It also returned the default answer. 
 
+##Create a QnA Bot with Azure Bot Service v4
 
-## Add personnality with Chit-chat 
+### Create a QnA Bot
+
+Create a bot as a client application for the knowledge base. 
+
+1. In the QnA Maker portal, go to the **Publish** page, and publish your knowledge base. Select **Create Bot**. 
+
+    ![In the QnA Maker portal, go to the Publish page, and publish your knowledge base. Select Create Bot.](../media/qnamaker-tutorials-create-bot/create-bot-from-published-knowledge-base-page.png)
+
+    The Azure portal opens with the bot creation configuration.
+
+1.  Enter the settings to create the bot:
+
+    |Setting|Value|Purpose|
+    |--|--|--|
+    |Bot name|`my-tutorial-kb-bot`|This is the Azure resource name for the bot.|
+    |Subscription|See purpose.|Select the same subscription as you used to create the QnA Maker resources.|
+    |Resource group|`my-tutorial-rg`|The resource group used for all the bot-related Azure resources.|
+    |Location|`west us`|The bot's Azure resource location.|
+    |Pricing tier|`F0`|The free tier for the Azure bot service.|
+    |App name|`my-tutorial-kb-bot-app`|This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other resource is not supported.|
+    |SDK Language|C#|This is the underlying programming language used by the bot framework SDK. Your choices are [C#](https://github.com/Microsoft/botbuilder-dotnet) or [Node.js](https://github.com/Microsoft/botbuilder-js).|
+    |QnA Auth Key|**Do not change**|This value is filled in for you.|
+    |App service plan/Location|**Do not change**|For this tutorial, the location is not important.|
+    |Azure Storage|**Do not change**|Conversation data is stored in Azure Storage tables.|
+    |Application Insights|**Do not change**|Logging is sent to Application Insights.|
+    |Microsoft App ID|**Do not change**|Active directory user and password is required.|
+
+    ![Create the knowledge base bot with these settings.](../media/qnamaker-tutorials-create-bot/create-bot-from-published-knowledge-base.png)
+
+    Wait a couple of minutes until the bot creation process notification reports success.
+
+<a name="test-the-bot"></a>
+
+### Chat with the Bot
+
+1. In the Azure portal, open the new bot resource from the notification. 
+
+    ![In the Azure portal, open the new bot resource from the notification.](../media/qnamaker-tutorials-create-bot/azure-portal-notifications.png)
+
+1. From **Bot management**, select **Test in Web Chat** and enter: `How large can my KB be?`. The bot will respond with: 
+
+
+    `The size of the knowledge base depends on the SKU of Azure search you choose when creating the QnA Maker service. Read [here](https://docs.microsoft.com/azure/cognitive-services/qnamaker/tutorials/choosing-capacity-qnamaker-deployment)for more details.`
+
+
+    ![Test the new knowledge base bot.](../media/qnamaker-tutorial-create-publish-query-in-portal/test-bot-in-web-chat-in-azure-portal.png)
+
+    For more information about Azure Bots, see [Use QnA Maker to answer questions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-qna?view=azure-bot-service-4.0&tabs=cs)
+
+
+### Add personnality with Chit-chat 
 
 1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality. 
 
