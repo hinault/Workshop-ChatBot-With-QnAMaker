@@ -211,7 +211,7 @@ Create a bot as a client application for the knowledge base.
 
 1. In the Azure portal, open the new bot resource from the notification. 
 
-    ![In the Azure portal, open the new bot resource from the notification.](../media/qnamaker-tutorials-create-bot/azure-portal-notifications.png)
+    ![In the Azure portal, open the new bot resource from the notification.](/media/azure-portal-notifications.png)
 
 1. From **Bot management**, select **Test in Web Chat** and enter: `How large can my KB be?`. The bot will respond with: 
 
@@ -219,12 +219,30 @@ Create a bot as a client application for the knowledge base.
     `The size of the knowledge base depends on the SKU of Azure search you choose when creating the QnA Maker service. Read [here](https://docs.microsoft.com/azure/cognitive-services/qnamaker/tutorials/choosing-capacity-qnamaker-deployment)for more details.`
 
 
-    ![Test the new knowledge base bot.](../media/qnamaker-tutorial-create-publish-query-in-portal/test-bot-in-web-chat-in-azure-portal.png)
+    ![Test the new knowledge base bot.](/media/test-azure-portal.PNG)
 
     For more information about Azure Bots, see [Use QnA Maker to answer questions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-qna?view=azure-bot-service-4.0&tabs=cs)
 
 
 ### Add personnality with Chit-chat 
+
+Adding chit-chat to your bot makes it more conversational and engaging. The chit-chat feature in QnA maker allows you to easily add a pre-populated set of the top chit-chat, into your knowledge base (KB). This can be a starting point for your bot's personality, and it will save you the time and cost of writing them from scratch.
+
+This dataset has about 100 scenarios of chit-chat in the voice of multiple personas, like Professional,Friendly and Witty.
+
+Some examples of the different personalities are below. You can see all the personality [datasets](https://github.com/Microsoft/BotBuilder-PersonalityChat/tree/master/CSharp/Datasets) along with details of the personalities.
+
+For the user query of `When is your birthday?`, each personality has a styled response:
+
+<!-- added quotes so acrolinx doesn't score these sentences -->
+|Personality|Example|
+|--|--|
+|Professional|Age doesn't really apply to me.|
+|Friendly|I don't really have an age.|
+|Witty|I'm age-free.|
+|Caring|I don't have an age.|
+|Enthusiastic|I'm a bot, so I don't have an age.|
+||
 
 1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality. 
 
