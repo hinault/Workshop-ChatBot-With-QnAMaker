@@ -88,6 +88,14 @@ Application Insights Location: Select Canada Central
 
     ![Screenshot of QnA Maker portal](media/save-and-train-kb.png)
 
+1. Select **Test** in the top menu bar.
+
+1. Type **how large** on the text box.
+
+1. Select Inspect. You can add alternative phrasing for this Answer or new answer for this question, if you think the answer is wrong.
+
+ ![Screenshot of Test](media/test-kb.PNG)
+
 1. Select **Save and train** in the top menu bar.
 
 ### Publish to get knowledge base endpoints
