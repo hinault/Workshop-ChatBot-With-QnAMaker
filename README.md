@@ -180,12 +180,12 @@ Create a bot as a client application for the knowledge base.
 
     |Setting|Value|Purpose|
     |--|--|--|
-    |Bot name|`my-tutorial-kb-bot`|This is the Azure resource name for the bot.|
+    |Bot name|`aibootcamp-qna-bot`|This is the Azure resource name for the bot.|
     |Subscription|See purpose.|Select the same subscription as you used to create the QnA Maker resources.|
-    |Resource group|`my-tutorial-rg`|The resource group used for all the bot-related Azure resources.|
-    |Location|`west us`|The bot's Azure resource location.|
+    |Resource group|`lab-rg-bot`|The resource group used for all the bot-related Azure resources.|
+    |Location|`Canada East`|The bot's Azure resource location.|
     |Pricing tier|`F0`|The free tier for the Azure bot service.|
-    |App name|`my-tutorial-kb-bot-app`|This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other resource is not supported.|
+    |App name|`aibootcamp-qna-bot-app`|This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other resource is not supported.|
     |SDK Language|C#|This is the underlying programming language used by the bot framework SDK. Your choices are [C#](https://github.com/Microsoft/botbuilder-dotnet) or [Node.js](https://github.com/Microsoft/botbuilder-js).|
     |QnA Auth Key|**Do not change**|This value is filled in for you.|
     |App service plan/Location|**Do not change**|For this tutorial, the location is not important.|
@@ -193,7 +193,7 @@ Create a bot as a client application for the knowledge base.
     |Application Insights|**Do not change**|Logging is sent to Application Insights.|
     |Microsoft App ID|**Do not change**|Active directory user and password is required.|
 
-    ![Create the knowledge base bot with these settings.](../media/qnamaker-tutorials-create-bot/create-bot-from-published-knowledge-base.png)
+    ![Create the knowledge base bot with these settings.](/media/create-bot-from-azure-portal.PNG)
 
     Wait a couple of minutes until the bot creation process notification reports success.
 
