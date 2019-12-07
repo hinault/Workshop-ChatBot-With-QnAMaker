@@ -250,18 +250,31 @@ For the user query of `When is your birthday?`, each personality has a styled re
 
 1. Go to qnamaker.ai portal. Select your KB and select **Settings** from the top menu.
 
-1. Scroll down to **Import knowledge base** and import qna_chitchat_friendly.tsv fiel.
+1. Scroll down to **Manage knowledge base**
 
+1. On **File name** sub section, click on **Add file** and add qna_chitchat_friendly.tsv file.
 
+ ![Add Chit-Chat](media/save-and-train-kb-chit-chat.png)
 
 1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality. 
 
 1. From the toolbar above the list of questions and answers, select the **View options** icon, and then select **Show metadata**. This shows the metadata tags for each question and answer. The Chit-chat questions have the **editorial: chit-chat** metadata already set. This metadata is returned to the client application, along with the selected answer. The client application, such as a chat bot, can use this filtered metadata to determine additional processing or interactions with the user.
 
-    ![Screenshot of QnA Maker portal](media/save-and-train-kb-chit-chat.png)
+    ![Screenshot of add chit-chat](media/add-chit-chat-kb.PNG)
 
-### Use cURL to query for a Chit-chat answer
+1. Click **Save and Train** from top menu.
 
+1. Click on **Edit** for review the questions and answers.
+
+1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality.
+
+1. From the toolbar above the list of questions and answers, select the View options icon, and then select Show metadata. This shows the metadata tags for each question and answer. The Chit-chat questions have the editorial: chit-chat metadata already set. This metadata is returned to the client application, along with the selected answer. The client application, such as a chat bot, can use this filtered metadata to determine additional processing or interactions with the user.
+
+  ![Screenshot of QnA Maker portal](media/save-and-train-kb-chit-chat.png)
+
+1. Select the **Publish** button from the top menu. On the publish page, select **Publish**.
+
+#### Use cURL to query for a Chit-chat answer
 
 1. In the cURL-enabled terminal, replace `How large can my KB be?` with a bot conversation-ending statement from the user, such as `Thank you`.   
 
