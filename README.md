@@ -224,7 +224,7 @@ Create a bot as a client application for the knowledge base.
     For more information about Azure Bots, see [Use QnA Maker to answer questions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-qna?view=azure-bot-service-4.0&tabs=cs)
 
 
-### Add personnality with Chit-chat 
+### Add personnality with Chit-Chat 
 
 Adding chit-chat to your bot makes it more conversational and engaging. The chit-chat feature in QnA maker allows you to easily add a pre-populated set of the top chit-chat, into your knowledge base (KB). This can be a starting point for your bot's personality, and it will save you the time and cost of writing them from scratch.
 
@@ -243,6 +243,16 @@ For the user query of `When is your birthday?`, each personality has a styled re
 |Caring|I don't have an age.|
 |Enthusiastic|I'm a bot, so I don't have an age.|
 ||
+
+#### Add Chit-Chat in your KB
+
+1. Download the English friendly [datasets on GitHub](https://github.com/Microsoft/BotBuilder-PersonalityChat/tree/master/CSharp/Datasets)
+
+1. Go to qnamaker.ai portal. Select your KB and select **Settings** from the top menu.
+
+1. Scroll down to **Import knowledge base** and import qna_chitchat_friendly.tsv fiel.
+
+
 
 1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality. 
 
