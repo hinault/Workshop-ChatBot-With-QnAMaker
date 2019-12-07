@@ -88,6 +88,14 @@ Application Insights Location: Select Canada Central
 
     ![Screenshot of QnA Maker portal](media/save-and-train-kb.png)
 
+1. Select **Test** in the top menu bar.
+
+1. Type **how large** on the text box.
+
+1. Select Inspect. You can add alternative phrasing for this Answer or new answer for this question, if you think the answer is wrong.
+
+ ![Screenshot of Test](media/test-kb.PNG)
+
 1. Select **Save and train** in the top menu bar.
 
 ### Publish to get knowledge base endpoints
@@ -172,7 +180,7 @@ Create a bot as a client application for the knowledge base.
 
 1. In the QnA Maker portal, go to the **Publish** page, and publish your knowledge base. Select **Create Bot**. 
 
-    ![In the QnA Maker portal, go to the Publish page, and publish your knowledge base. Select Create Bot.](../media/qnamaker-tutorials-create-bot/create-bot-from-published-knowledge-base-page.png)
+    ![In the QnA Maker portal, go to the Publish page, and publish your knowledge base. Select Create Bot.](/media/create-bot-from-qna-portal.PNG)
 
     The Azure portal opens with the bot creation configuration.
 
@@ -180,12 +188,12 @@ Create a bot as a client application for the knowledge base.
 
     |Setting|Value|Purpose|
     |--|--|--|
-    |Bot name|`my-tutorial-kb-bot`|This is the Azure resource name for the bot.|
+    |Bot name|`aibootcamp-qna-bot`|This is the Azure resource name for the bot.|
     |Subscription|See purpose.|Select the same subscription as you used to create the QnA Maker resources.|
-    |Resource group|`my-tutorial-rg`|The resource group used for all the bot-related Azure resources.|
-    |Location|`west us`|The bot's Azure resource location.|
+    |Resource group|`lab-rg-bot`|The resource group used for all the bot-related Azure resources.|
+    |Location|`Canada East`|The bot's Azure resource location.|
     |Pricing tier|`F0`|The free tier for the Azure bot service.|
-    |App name|`my-tutorial-kb-bot-app`|This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other resource is not supported.|
+    |App name|`aibootcamp-qna-bot-app`|This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other resource is not supported.|
     |SDK Language|C#|This is the underlying programming language used by the bot framework SDK. Your choices are [C#](https://github.com/Microsoft/botbuilder-dotnet) or [Node.js](https://github.com/Microsoft/botbuilder-js).|
     |QnA Auth Key|**Do not change**|This value is filled in for you.|
     |App service plan/Location|**Do not change**|For this tutorial, the location is not important.|
@@ -193,7 +201,7 @@ Create a bot as a client application for the knowledge base.
     |Application Insights|**Do not change**|Logging is sent to Application Insights.|
     |Microsoft App ID|**Do not change**|Active directory user and password is required.|
 
-    ![Create the knowledge base bot with these settings.](../media/qnamaker-tutorials-create-bot/create-bot-from-published-knowledge-base.png)
+    ![Create the knowledge base bot with these settings.](/media/create-bot-from-azure-portal.PNG)
 
     Wait a couple of minutes until the bot creation process notification reports success.
 
@@ -203,7 +211,7 @@ Create a bot as a client application for the knowledge base.
 
 1. In the Azure portal, open the new bot resource from the notification. 
 
-    ![In the Azure portal, open the new bot resource from the notification.](../media/qnamaker-tutorials-create-bot/azure-portal-notifications.png)
+    ![In the Azure portal, open the new bot resource from the notification.](/media/azure-portal-notifications.png)
 
 1. From **Bot management**, select **Test in Web Chat** and enter: `How large can my KB be?`. The bot will respond with: 
 
@@ -211,12 +219,40 @@ Create a bot as a client application for the knowledge base.
     `The size of the knowledge base depends on the SKU of Azure search you choose when creating the QnA Maker service. Read [here](https://docs.microsoft.com/azure/cognitive-services/qnamaker/tutorials/choosing-capacity-qnamaker-deployment)for more details.`
 
 
-    ![Test the new knowledge base bot.](../media/qnamaker-tutorial-create-publish-query-in-portal/test-bot-in-web-chat-in-azure-portal.png)
+    ![Test the new knowledge base bot.](/media/test-azure-portal.PNG)
 
     For more information about Azure Bots, see [Use QnA Maker to answer questions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-qna?view=azure-bot-service-4.0&tabs=cs)
 
 
-### Add personnality with Chit-chat 
+### Add personnality with Chit-Chat 
+
+Adding chit-chat to your bot makes it more conversational and engaging. The chit-chat feature in QnA maker allows you to easily add a pre-populated set of the top chit-chat, into your knowledge base (KB). This can be a starting point for your bot's personality, and it will save you the time and cost of writing them from scratch.
+
+This dataset has about 100 scenarios of chit-chat in the voice of multiple personas, like Professional,Friendly and Witty.
+
+Some examples of the different personalities are below. You can see all the personality [datasets](https://github.com/Microsoft/BotBuilder-PersonalityChat/tree/master/CSharp/Datasets) along with details of the personalities.
+
+For the user query of `When is your birthday?`, each personality has a styled response:
+
+<!-- added quotes so acrolinx doesn't score these sentences -->
+|Personality|Example|
+|--|--|
+|Professional|Age doesn't really apply to me.|
+|Friendly|I don't really have an age.|
+|Witty|I'm age-free.|
+|Caring|I don't have an age.|
+|Enthusiastic|I'm a bot, so I don't have an age.|
+||
+
+#### Add Chit-Chat in your KB
+
+1. Download the English friendly [datasets on GitHub](https://github.com/Microsoft/BotBuilder-PersonalityChat/tree/master/CSharp/Datasets)
+
+1. Go to qnamaker.ai portal. Select your KB and select **Settings** from the top menu.
+
+1. Scroll down to **Import knowledge base** and import qna_chitchat_friendly.tsv fiel.
+
+
 
 1. Select the last page of questions and answers from the bottom of the table. The page shows questions and answers from the Chit-chat personality. 
 
