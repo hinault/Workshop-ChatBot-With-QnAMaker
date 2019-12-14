@@ -37,27 +37,27 @@ A client application for QnA Maker is any conversational application that commun
 
 1. Provide the required information:
 
-Name: chatbot-qna-<your initials>
+**Name:** chatbot-qna-<your initials>
   
-Subscription : Select your existing subscription
+**Subscription:** Select your existing subscription
 
-Pricing tier: Select F0 (3 Calls per second)
+**Pricing tier:** Select F0 (3 Calls per second)
 
-Resource group: Clic on Create new and type the name qna-lab-rg
+**Resource group:** Clic on Create new and type the name qna-lab-rg
 
-Resource group location : Select Canada Central
+**Resource group location:** Select Canada Central
 
-Search pricing tier: Select F (3 Indexes)
+**Search pricing tier:** Select F (3 Indexes)
 
-Search Location:Select Canada Central
+**Search Location:** Select Canada Central
 
-App name: chatbot-qna-<your initials>
+**App name:** chatbot-qna-<your initials>
   
-Website Location:Select Canada Central
+**Website Location:** Select Canada Central
 
-Application Insights Location: Select Canada Central
+**Application Insights Location:** Select Canada Central
 
-   ![Screenshot of QnA Maker portal](media/create-qna-service.png)
+   ![Screenshot of QnA Maker portal](media/create-qna-service.PNG)
 
 1. Click Create to deploy the service. This step might take a few moments.
 
